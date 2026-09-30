@@ -1,0 +1,9 @@
+#spring.application.name=module3BeanProject
+
+
+ledger:
+  settlement:
+    payout-url: "https://api.ledger.com/payouts"
+    min-payout-minor: 1000
+
+
