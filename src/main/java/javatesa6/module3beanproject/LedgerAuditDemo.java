@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 public class LedgerAuditDemo {
 
@@ -31,7 +32,7 @@ public class LedgerAuditDemo {
     }
 
     // 3. The Auto-Configuration Class (simulating the library component)
-    @AutoConfiguration
+    @Configuration
     @ConditionalOnClass(AuditWriter.class)
     @ConditionalOnProperty(prefix = "ledger.audit", name = "enabled", havingValue = "true", matchIfMissing = true)
     public static class AuditAutoConfiguration {
